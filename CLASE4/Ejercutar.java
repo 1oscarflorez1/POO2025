@@ -6,7 +6,7 @@ public class Ejercutar {
         //CREACION DE LOS OBJETOS DE LA CLASE VEHICULO
         // LLAMAR CLASE ... = CONSTRUCTOR DE CLASE
 
-        //FORMA 1
+        //FORMA 1 (MAS RESUMIDO)
         Vehiculo objVehiculo = new Vehiculo("Toyota", "Blanca", 4500.0, "TS3456WE", 2.3, "150HP");
         //FORMA 2
         Vehiculo objVehiculo2;
@@ -20,6 +20,11 @@ public class Ejercutar {
 
         //Mostrar todo el objeto
         System.out.println(objVehiculo.toString());
-        System.out.println(objVehiculo);
+        System.out.println(objVehiculo2);
+
+        System.out.println(objVehiculo.getMarca());
+        objVehiculo.acelerar();
+        System.out.println(objVehiculo2.getMarca());
+        objVehiculo2.acelerar();
     }
 }
