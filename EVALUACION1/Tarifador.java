@@ -14,9 +14,11 @@ public class Tarifador {
         
         //BIENVENIDA
         System.out.println("BIENVENIDOS A ParkingNow, SU PARQUEO DE CONFIANZA!");
+        System.out.println("¡HORARIO DE ATENCIÓN: DESDE LAS 07:00 HRS HASTA LAS 22:00 HRS, TODOS LOS DIAS DE LA SEMANA!");
+        
         //Imprimiendo valor tarifaS...
         System.out.println("$ TARIFAS: $ ");
-        System.out.println("         0 ≤ 30 minutos = $0\n         30 < 60 minutos = $800\n         ≥ 60 minutos = $2000");
+        System.out.println("         ≤ 30 minutos = $0\n         30 < 60 minutos = $800\n         ≥ 60 minutos = $2000");
         
         //Se crea el menu principal con while para la iteracion y finalizar.
         //MENU PRINCIPAL
@@ -60,9 +62,13 @@ public class Tarifador {
                     }
         }else if (menu == 3){
             //MENU DE COBRO
-            System.out.println("Ingrese su lugar de parqueadero: ");
-            int lugar = scanner.nextInt();
-        System.exit(0);
+            System.out.println("Ingrese su tiempo en el parqueadero: ");
+            int tiempo = scanner.nextInt();
+            if(tiempo>0 && tiempo<31){
+                System.out.println("Felicidades, no se te cobrará tarifa! ");
+            }else if (tiempo>30 && tiempo<60){
+                int tarifa=tiempo*
+            }
 
         }else if (menu == 4){
             //EXIT
