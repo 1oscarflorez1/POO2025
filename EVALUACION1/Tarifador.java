@@ -18,7 +18,7 @@ public class Tarifador {
         System.out.println("$ TARIFAS: $ ");
         System.out.println("         0 ≤ 30 minutos = $0\n         30 < 60 minutos = $800\n         ≥ 60 minutos = $2000");
         
-        //Se crea el menu principal con while para la iteracion.
+        //Se crea el menu principal con while para la iteracion y finalizar.
         //MENU PRINCIPAL
         while (true){
         System.out.println("_-MENU PRINCIPAL-_");
@@ -26,7 +26,7 @@ public class Tarifador {
         System.out.println("- REGISTRA TU MOTO..");
         System.out.println("1. Bajo cilindraje (0cc - 399cc)..");
         System.out.println("2. Alto cilindraje (400cc - 2500cc)..");
-        System.out.println("3. COBROS..");
+        System.out.println("3. MENU COBROS..");
         System.out.println("4. CERRAR APLICATIVO.");
         int menu = scanner.nextInt();
 
@@ -58,26 +58,21 @@ public class Tarifador {
                     }else{
                         System.out.println("Lugar no valido, intenta nuevamente");
                     }
-        }
-
-        if (menu == 3){
-            System.out.println("El programa se cerrará.");
+        }else if (menu == 3){
+            //MENU DE COBRO
+            System.out.println("Ingrese su lugar de parqueadero: ");
+            int lugar = scanner.nextInt();
         System.exit(0);
-        }
 
+        }else if (menu == 4){
+            //EXIT
+            System.out.println("Cerrando aplicativo...");
+            break;
+        }else{
+            System.out.println("Intenta de nuevo..");
+        }    
         
-        
-        
-        // Reconociendo moto...
-        Scanner lectura = new Scanner(System.in);
-        System.out.println("Ingrese su tipo de moto: ");
-        System.out.println("1. Bajo cilindraje (0cc - 399cc)");
-        System.out.println("2. Alto cilindraje (400cc - 2500cc)");
-        int tipoMoto = lectura.nextInt();
-        
-        System.out.println("Ha seleccionado que su ");
-    
-        lectura.close();
+    scanner.close();
     }
     }
 }
