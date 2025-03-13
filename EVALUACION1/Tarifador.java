@@ -4,12 +4,11 @@ import java.util.Scanner;
 public class Tarifador {
     public static void main(String[] args) {
         //Se crean arreglos para los lugares de parqueo
-        int[] bajoCilindraje = new int[20];
-        int[] altoCilindraje = new int[10];
+        boolean[] bajoCilindraje = new boolean[20];
+        boolean[] altoCilindraje = new boolean[10];
         System.out.println("(0cc - 399cc): " + Arrays.toString(bajoCilindraje));
         System.out.println("(400cc - 2500cc): " + Arrays.toString(altoCilindraje));
         System.out.println("¡Que suerte! Todos los puestos estan disponibles... por ahora.\n");
-
 
         Scanner scanner = new Scanner(System.in);
         
@@ -36,7 +35,14 @@ public class Tarifador {
             System.out.println("3. COBROS..");
             int lugar = scanner.nextInt();
             if(lugar >= 0 && lugar >20){
-                if()
+                if(bajoCilindraje[lugar] = false){
+                    bajoCilindraje[lugar] = true;
+                    System.out.println("Moto registrada en el lugar" + lugar);
+                }else{
+                    System.out.println("Lo sentimos, el lugar " + lugar + "ya esta tomado");
+                }
+            }else{
+                System.out.println("Lugar no valido, intenta nuevamente");
             }
 
         }
