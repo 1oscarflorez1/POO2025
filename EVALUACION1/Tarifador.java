@@ -32,7 +32,7 @@ public class Tarifador {
 
         if (menu == 1){
             //Se registrará como bajo cilindraje
-            System.out.println("3. COBROS..");
+            System.out.println("Ingrese un lugar disponible entre 0 y 19: ");
             int lugar = scanner.nextInt();
             if(lugar >= 0 && lugar >20){
                 if(bajoCilindraje[lugar] = false){
@@ -44,11 +44,20 @@ public class Tarifador {
             }else{
                 System.out.println("Lugar no valido, intenta nuevamente");
             }
-
-        }
-
-        if (menu == 2){
-
+        }else if (menu == 2){
+                    //Se registrará como alto cilindraje
+                    System.out.println("Ingrese un lugar disponible entre 0 y 9: ");
+                    int lugar = scanner.nextInt();
+                    if(lugar >= 0 && lugar >9){
+                        if(altoCilindraje[lugar] = false){
+                            altoCilindraje[lugar] = true;
+                            System.out.println("Moto registrada en el lugar" + lugar);
+                        }else{
+                            System.out.println("Lo sentimos, el lugar " + lugar + "ya esta tomado");
+                        }
+                    }else{
+                        System.out.println("Lugar no valido, intenta nuevamente");
+                    }
         }
 
         if (menu == 3){
