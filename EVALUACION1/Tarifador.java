@@ -67,8 +67,9 @@ public class Tarifador {
             if(tiempo>0 && tiempo<31){
                 System.out.println("Felicidades, no se te cobrará tarifa! ");
             }else if (tiempo>30 && tiempo<60){
-                int tarifa=tiempo*
-            }
+                System.out.println("Su tarifa de parqueo es de $800.");
+            }else if (tiempo>59){
+                System.out.println("Su tarifa de parqueo es de $2000.");
 
         }else if (menu == 4){
             //EXIT
@@ -76,9 +77,9 @@ public class Tarifador {
             break;
         }else{
             System.out.println("Intenta de nuevo..");
-        }    
+        }           
         
     scanner.close();
-    }
+        
     }
 }
