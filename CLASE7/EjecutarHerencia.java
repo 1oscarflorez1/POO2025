@@ -9,4 +9,4 @@ public class EjecutarHerencia {
         System.out.println(objT1);
         System.out.println(objT2);
     }
-}
+} 
