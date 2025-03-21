@@ -18,6 +18,5 @@ public class Operario extends Trabajador {
                 "Nombre: " + super.getNombre() +
                 "Apellido: " + super.getApellido() +
                 "Horas Laboradas: " + horas + "{";
-            
             }
 }   
