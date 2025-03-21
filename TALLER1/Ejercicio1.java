@@ -15,5 +15,6 @@ public class Ejercicio1 {
         }
 
         System.out.println("La suma de los números es: " + suma);
+        scanner.close();
     }
 }
