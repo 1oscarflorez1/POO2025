@@ -4,15 +4,14 @@ public class Cuenta {
     private String tipo;
     private double saldo;
 
-    public Cuenta(int numero, string tipo, double saldo) {
+    public Cuenta(int numero, String tipo, double saldo) {
         this.numero = numero;
         this.tipo = tipo;
         this.saldo = saldo;
-
     }
 
     public String toString() {
-        return "cuenta{ Nombre: " + numero +
+        return "{ Numero: " + numero +
                 " tipo: " + tipo +
                 " Saldo: " + saldo + "}";
     }

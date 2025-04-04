@@ -6,10 +6,9 @@ public class Cliente {
     public Cliente(long cedula, String nombre){
         this.cedula = cedula;
         this.nombre = nombre;
-
     }
 
     public String toString(){
-        return "Cliente { Cedula: " + cedula + " Nombre: " + nombre + "}";
+        return "Cliente: { Cedula: " + cedula + " Nombre: " + nombre + "}";
     }
 }
