@@ -5,7 +5,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         ArrayList<Producto> carrito = new ArrayList<>();
         int opcion;
-        int contadorProductos = 1;
+        int contadorProductos = 0;
 
         do {
             System.out.println("\n--- MENÚ ---");
@@ -25,10 +25,10 @@ public class Main {
                     System.out.print("Modelo: ");
                     String modelo = sc.nextLine();
                     System.out.print("Descripción: ");
-                    String desc = sc.nextLine();
+                    String descripcion = sc.nextLine();
                     System.out.print("Precio: ");
                     int precio = sc.nextInt();
-                    carrito.add(new Camara(contadorProductos++, precio, desc, marca, modelo));
+                    carrito.add(new Camara(contadorProductos++, precio, descripcion, marca, modelo));
                     break;
 
                 case 2:
@@ -52,8 +52,8 @@ public class Main {
                     int horas = sc.nextInt();
                     sc.nextLine();
                     System.out.print("Software utilizado: ");
-                    String software = sc.nextLine();
-                    carrito.add(new Edicion(contadorProductos++, horas * 10000, "Edición profesional", horas, software));
+                    String softwareEditor = sc.nextLine();
+                    carrito.add(new Edicion(contadorProductos++, horas * 10000, "Edición profesional", horas, softwareEditor));
                     break;
 
                 case 4:
@@ -69,11 +69,6 @@ public class Main {
                     break;
             }
         } while (opcion != 5);
-
         System.out.println("Gracias por usar el sistema. ¡Hasta luego!");
-    }
-}
-
-    }
-
+        }
 }

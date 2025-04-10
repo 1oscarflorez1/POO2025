@@ -28,4 +28,7 @@ public class Camara extends Producto {
         this.modelo = modelo;  
     }
 // metodos
+    public void print() {
+        System.out.println("Marca: " + marca + "con el modelo: " + modelo );
+}
 }

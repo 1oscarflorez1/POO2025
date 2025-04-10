@@ -9,7 +9,7 @@ public class Edicion extends Producto {
         this.softwareEditor = softwareEditor;
     }
 //Getters
-    public int getHoras() {
+    public double getHoras() {
         return horas;
     }
     public String softwareEditor() {
