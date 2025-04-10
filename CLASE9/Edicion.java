@@ -3,14 +3,28 @@ public class Edicion extends Producto {
     private double horas;
     private String softwareEditor;
 //Constructor
-public Edicion(int numero, int precio, String descripcion, int horas, String softwareUtilizado) {
-    super(numero, precio, descripcion);
-    this.horas = horas;
-    this.softwareUtilizado = softwareUtilizado;
+    public Edicion(int numero, int precio, String descripcion, int horas, String softwareEditor) {
+        super(numero, precio, descripcion);
+        this.horas = horas;
+        this.softwareEditor = softwareEditor;
+    }
+//Getters
+    public int getHoras() {
+        return horas;
+    }
+    public String softwareEditor() {
+        return softwareEditor;
+    }
+//Setters
+    public void setHoras(int horas) {
+        this.horas = horas;
+    }
+    public void softwareEditor(String softwareEditor) {
+        this.softwareEditor = softwareEditor;
+    }
+//Metodos
+    public void print() {
+        System.out.println("Edición: " + horas + "hrs en " + softwareEditor + " - Precio: $" + getPrecio());
+    }
 }
-    //metodo
-    System.out.println("Servicio de edición:");
-    System.out.println("Horas: " + horas);
-    System.out.println("Software: " + softwareEditor);
-    System.out.println("Precio: $" + getPrecio());
-}
+
