@@ -1,7 +1,7 @@
-public class Impresion extends Producto{
-    //Atributos
+public class Impresion extends Producto {
+    // Atributos
     private String color;
-    private Foto[] foto; //Arreglo de fotos 
+    private Foto[] foto; // Arreglo de fotos
 
-    //Metodos
+    // Metodos
 }
