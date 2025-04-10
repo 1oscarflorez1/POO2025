@@ -6,6 +6,7 @@ public class Cliente {
     private String direccion;
     private int celular;
     private String correo; 
+    
     //metodos
 
 }
