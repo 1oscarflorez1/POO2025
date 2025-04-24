@@ -24,7 +24,7 @@ public class Edicion extends Producto {
     }
 //Metodos
     public void print() {
-        System.out.println("Edición: " + horas + "hrs en " + softwareEditor + " - Precio: $" + getPrecio());
+        System.out.println("- Edición: " + horas + " hr/s en " + softwareEditor + " - Precio: $" + getPrecio());
     }
 }
 

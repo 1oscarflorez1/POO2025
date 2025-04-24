@@ -1,7 +1,7 @@
 public class Impresion extends Producto {
     // Atributos
     private String color;
-    private Foto[] foto; // Arreglo de fotos
+    private Foto[] foto; // Arreglo de fotos (composicion)
     // Constructor
     public Impresion(int numero, int precio, String descripcion, String color, Foto[] foto) {
         super(numero, precio, descripcion);
@@ -24,6 +24,6 @@ public class Impresion extends Producto {
     }
     // Metodos
     public void print() {
-        System.out.println("Impresión en " + color + " - Precio: $" + getPrecio());
+        System.out.println("- Impresión en " + color + " - Precio: $" + getPrecio());
     }
 }

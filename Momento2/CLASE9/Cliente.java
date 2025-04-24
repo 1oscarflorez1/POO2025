@@ -4,10 +4,10 @@ public class Cliente {
     private String cedula;
     private String nombre;
     private String direccion;
-    private int celular;
+    private String celular;
     private String correo; 
 //Constructor
-    public Cliente(String cedula, String nombre, String direccion, int celular, String correo) {
+    public Cliente(String cedula, String nombre, String direccion, String celular, String correo) {
         this.cedula = cedula;
         this.nombre = nombre;
         this.direccion = direccion;
@@ -24,7 +24,7 @@ public class Cliente {
     public String getDireccion() {
         return direccion;
     }
-    public int getCelular() {
+    public String getCelular() {
         return celular;
     }
     public String getCorreo() {
@@ -40,7 +40,7 @@ public class Cliente {
     public void setDireccion(String direccion) {
         this.direccion = direccion;
     }
-    public void setCelular(int celular) {
+    public void setCelular(String celular) {
         this.celular = celular;
     }
     public void setCorreo(String correo) {

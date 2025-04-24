@@ -29,6 +29,7 @@ public class Pedido {
         }
         return total;
     }
+
     public void mostrarPedido() {
         for (Producto p : producto) {
             if (p instanceof Camara) {
@@ -39,6 +40,6 @@ public class Pedido {
                 ((Edicion)p).print();
             }
         }
-        System.out.println("Total a pagar: $" + calcularTotal());
+        System.out.println("    Total a pagar: $" + calcularTotal());
     }
 }

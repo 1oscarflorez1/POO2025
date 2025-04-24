@@ -3,7 +3,7 @@ public class Foto extends Camara{
     private String fichero;
 //Constructor
     public Foto(int numero, int precio, String descripcion, String marca, String modelo, String fichero) {
-        super(numero, precio, descripcion, marca, modelo);
+        super(numero, precio, descripcion, marca, modelo, fichero);
         this.fichero = fichero; 
     }
 //Getters
@@ -16,6 +16,6 @@ public class Foto extends Camara{
     }
     //metodo
     public void print(){
-        System.out.println("Foto: " + fichero + " - Precio: $" + getPrecio());
+        System.out.println("- Foto: " + fichero + " - Precio: $" + getPrecio());
     }
 }
