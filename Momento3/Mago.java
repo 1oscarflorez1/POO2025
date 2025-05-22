@@ -1,17 +1,18 @@
 import java.util.Random;
-public class Guerrero extends Personaje {
-    public Guerrero(String nombre) {
+
+public class Mago extends Personaje{
+     public Mago(String nombre) {
         super(nombre);
-        this.puntosDeVida = 120;
+        this.puntosDeVida = 100;
     }
-  @Override
+@Override
     public void ataqueEspecial(Personaje oponente) {
         if (!ataqueEspecialUsado) {
             Random rand = new Random();
-            int dano = rand.nextInt(21) + 20; // 20 a 40
+            int dano = rand.nextInt(26) + 15; // 15 a 40
             oponente.recibirDano(dano);
             ataqueEspecialUsado = true;
-            System.out.println(nombre + " usa su ataque especial con espada feroz y causa " + dano + " de daño.");
+            System.out.println(nombre + " lanza una bola de fuego y causa " + dano + " de daño mágico.");
         } else {
             System.out.println(nombre + " ya ha usado su ataque especial.");
         }

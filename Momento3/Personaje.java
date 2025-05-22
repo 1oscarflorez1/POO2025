@@ -1,45 +1,44 @@
 import java.util.Random;
-import java.util.Scanner;
 
 //Clase abstracta que representa un personaje del juego.
 abstract class Personaje {
     protected String nombre;
     protected int puntosDeVida;
-    protected boolean ataqueEspecialUsado = false;
-    protected final int MIN_DANO = 10;
-    protected final int MAX_DANO = 30;
+    protected boolean ataqueEspecialUsado;
 
 //constructor de personaje
- public Personaje(String nombre) {
+ public Personaje(String nombre, int puntosDeVida) {
         this.nombre = nombre;
+        this.puntosDeVida = puntosDeVida;
+        this.ataqueEspecialUsado = false;
     }
       public void atacar(Personaje oponente) {
         Random rand = new Random();
-        int dano = rand.nextInt((MAX_DANO - MIN_DANO) + 1) + MIN_DANO;
+        int dano = rand.nextInt(21) + 10; // 10 a 30
         oponente.recibirDano(dano);
-        System.out.println(this.nombre + " ataca a " + oponente.getNombre() + " causando " + dano + " puntos de daño.");
+        System.out.println(nombre + " ataca causando " + dano + " puntos de daño.");
     }
 
     public abstract void ataqueEspecial(Personaje oponente);
 
     public void recibirDano(int dano) {
         this.puntosDeVida -= dano;
-        if (this.puntosDeVida < 0) this.puntosDeVida = 0;
+        if (puntosDeVida < 0) puntosDeVida = 0;
     }
 
     public boolean estaVivo() {
-        return this.puntosDeVida > 0;
+        return puntosDeVida > 0;
     }
 
     public String getNombre() {
-        return this.nombre;
+        return nombre;
     }
 
     public int getPuntosDeVida() {
-        return this.puntosDeVida;
+        return puntosDeVida;
     }
 
     public boolean puedeUsarEspecial() {
-        return !ataqueEspecialUsado;
+        return ataqueEspecialUsado;
     }
 }
