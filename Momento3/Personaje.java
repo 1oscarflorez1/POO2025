@@ -22,7 +22,7 @@ abstract class Personaje {
     public abstract void ataqueEspecial(Personaje oponente);
 
     public void recibirDano(int dano) {
-        this.puntosDeVida -= dano;
+        puntosDeVida -= dano;
         if (puntosDeVida < 0) puntosDeVida = 0;
     }
 
